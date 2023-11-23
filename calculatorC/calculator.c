@@ -29,11 +29,12 @@ SOFTWARE.
 #include "calculate.c"
 #include <stdio.h>
 #include <stdbool.h>
+#include <ctype.h>
 
 
 main ()
 {
-    double x = 0.0;
+    double x = 0;
     double y = 0.0;
     double result = 0.0;
     char oper = '+';
@@ -46,9 +47,20 @@ main ()
     {
         scanf ("%lf %c %lf", &x, &oper, &y);
 
+        //int a = isalpha (x);
+
+        printf (" ISDIGIT = %d \n", isdigit(x));
+
         if (oper == '/' && y == 0)
         {
             printf ("You attempted to divide by 0 \n");
+
+            continue;
+        }
+
+        else if (isdigit (x) == 0)
+        {
+            printf ("You entered a letter \n");
 
             continue;
         }

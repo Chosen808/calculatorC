@@ -1,5 +1,5 @@
 calculator: calculator.c 
-	gcc -Wall -g calculator.c -o calculator.o
+	gcc -Wall -g calculator.c -o calculator
 
 clean:
-	rm -r *.o
+	rm -r *.o calculator
