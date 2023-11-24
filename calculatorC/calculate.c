@@ -29,7 +29,7 @@ SOFTWARE.
 #include "calculator.h"
 #include <stdio.h>
 
-// This function will caluclate values as doubles and return them as doubles
+// This function will calculate values as doubles and return them as doubles
 double calculate (double x, char oper, double y)
 {
     // These variables will pass info to the variables in the struct

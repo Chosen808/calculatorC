@@ -68,7 +68,7 @@ main ()
             continue;
         }
 
-        // if user tries to divide by 0 this statement will execute
+        // If user tries to divide by 0 this statement will execute
         else if (oper == '/' && y == 0)
         {
             printf ("You attempted to divide by 0 \n");
