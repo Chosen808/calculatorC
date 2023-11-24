@@ -29,38 +29,37 @@ SOFTWARE.
 #include "calculate.c"
 #include <stdio.h>
 #include <stdbool.h>
-#include <ctype.h>
+#include <string.h>
 
 
 main ()
 {
-    double x = 0;
+    char in[25] = "test";
+    double x = 0.0;
     double y = 0.0;
     double result = 0.0;
-    char oper = '+';
-    
+    char oper;
 
     printf ("Calculator console application \n\n");
     printf ("Please enter the operation to perform. Format: a+b | a-b | a*b | a/b \n");
 
     while (true)
-    {
-        scanf ("%lf %c %lf", &x, &oper, &y);
+    {   
+        fgets (in, 25, stdin);
 
-        //int a = isalpha (x);
+        int value = sscanf (in,"%lf %c %lf", &x, &oper, &y);
 
-        printf (" ISDIGIT = %d \n", isdigit(x));
-
-        if (oper == '/' && y == 0)
+        if (value != 3)
         {
-            printf ("You attempted to divide by 0 \n");
-
+            printf ("You type the correct input \n");
+            printf ("Please like this: 2.5 + 4.5 \n");
+            
             continue;
         }
 
-        else if (isdigit (x) == 0)
+        else if (oper == '/' && y == 0)
         {
-            printf ("You entered a letter \n");
+            printf ("You attempted to divide by 0 \n");
 
             continue;
         }
