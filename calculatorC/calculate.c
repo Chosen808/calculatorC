@@ -29,11 +29,14 @@ SOFTWARE.
 #include "calculator.h"
 #include <stdio.h>
 
+// This function will caluclate values as doubles and return them as doubles
 double calculate (double x, char oper, double y)
 {
+    // These variables will pass info to the variables in the struct
     calculator_t a, b, c;
     a.x = x , b.oper = oper, c.y = y;
 
+    // Calculation will be made here
     switch (b.oper)
     {
         case '+':

@@ -28,10 +28,11 @@ SOFTWARE.
 
 #pragma once
 
+// Calculator struct
 typedef struct calculator
 {
-    double x;
-    double y;
-    char oper;
+    double x;   // Primary value will be assigned here
+    double y;   // Secondary value will be assigned here
+    char oper;  // Operator will be assigned here
 } calculator_t;
 
